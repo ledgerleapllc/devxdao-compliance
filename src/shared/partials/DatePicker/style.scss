@@ -1,0 +1,11 @@
+.custom-date-picker {
+  .MuiOutlinedInput-input {
+    padding: 10px 14px;
+  }
+  .MuiInputLabel-root {
+    @apply text-sm;
+  }
+  .MuiInputLabel-root:not(.MuiInputLabel-shrink) {
+    transform: translate(14px, 11px) scale(1);
+  }
+}

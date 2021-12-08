@@ -1,0 +1,12 @@
+.custom-autocomplete {
+  .MuiInputLabel-root {
+    @apply text-sm;
+  }
+  .MuiOutlinedInput-root {
+    padding-top: 3px !important;
+    padding-bottom: 2px !important;
+  }
+  .MuiInputLabel-root:not(.MuiInputLabel-shrink) {
+    transform: translate(14px, 11px) scale(1);
+  }
+}

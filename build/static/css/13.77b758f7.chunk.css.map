@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/pages/Feature/Proposals/ProposalCompliance/style.scss"],"names":[],"mappings":"AAAA,mBACE,UAAW,CADb,kCAGI,WAAY,CAHhB,mCAMI,eAAgB","file":"13.77b758f7.chunk.css","sourcesContent":[".vote-detail-table {\n  width: 100%;\n  td:nth-child(1) {\n    width: 15rem;\n  }\n  td:nth-child(2) {\n    font-weight: 500;\n  }\n}\n"]}

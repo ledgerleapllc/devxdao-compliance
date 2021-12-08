@@ -1,8 +1,38 @@
-<p align="center" padding-top="100"><img src="https://ledgerleap.com/web/images/devxdao-compliance-logo.svg" width="400"></a></p>
+<p align="center" padding-top="100">
+	<img src="https://ledgerleap.com/web/images/devxdao-compliance-logo.svg" width="400">
+</p>
 
-## DevxDao Compliance Portal Frontend
+## DevxDao Program Management Frontend
+
+The DevxDao's Program Management and Operations portal hosted at https://compliance.devxdao.com
+
+This is a frontend repo of the portal. Backend repo for this project is located here, https://github.com/ledgerleapllc/devxdao-backend
+
+This project also has the following portal repos associated with it:
+
+Main DevxDao frontend portal: https://github.com/ledgerleapllc/devxdao-frontend
+
+Program Management portal: https://github.com/ledgerleapllc/devxdao-pm
+
+### Prerequesites
+
+Relies on NodeJS version 14+
+
+You can find documentation on NodeJS here https://github.com/nodejs/help
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Install and Deploy
+
+First we need a server to use. Apache/Nginx
+
+```bash
+sudo apt -y install apache2
+sudo a2enmod rewrite
+sudo a2enmod headers
+sudo a2enmod ssl
+sudo apt-get update
+```
 
 Setup the repo according to our VHOST path. Note, the actual VHOST path in this case should be set to **/var/www/devxdao-compliance/build**
 
@@ -12,79 +42,36 @@ git clone https://github.com/ledgerleapllc/devxdao-compliance
 cd devxdao-compliance
 ```
 
+If you do not have Node installed yet, we use v14.x. Script below
+
+```bash
+curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+sudo apt install nodejs -y
+```
+
+Install packages
+
+```bash
+npm install
+```
+
+You will need to modify **.env.production** and specify variables to fit the server on which you're deploying. Default domains specified are portal.devxdao.com and backend.devxdao.com.
+
 Requires Yarn build
 
 ```bash
 yarn build
 ```
 
-# Getting Started with Create React App
+The above commands will build to **build/** on site using the variables from your .env.production file.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Default user/passwords
 
-## Available Scripts
+Default user/admin logins are created in the portal during initial install. 
+All the default logins that are created on install are given random hash passwords that can be found printed in your backend laravel log file that will look something like this:
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+[2021-11-30 18:13:51] production.INFO:  Created <type> admin
+[2021-11-30 18:13:51] production.INFO:  Email: <email>
+[2021-11-30 18:13:51] production.INFO:  Password: <random_password>
+```

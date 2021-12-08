@@ -1,0 +1,21 @@
+.kyc-info {
+  td {
+    @apply pb-2;
+  }
+  td:nth-child(1) {
+    width: 50%;
+  }
+  td:nth-child(2) {
+    width: 50%;
+    font-weight: 500;
+  }
+}
+.kyc-dialog {
+  max-width: 50rem;
+}
+.ga-table {
+  td {
+    width: 25%;
+    padding-bottom: 0.5rem;
+  }
+}

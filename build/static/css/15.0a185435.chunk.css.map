@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/shared/layouts/Sidebar/style.module.scss"],"names":[],"mappings":"AAAA,sBACE,mDAAiC,CACjC,gBAAiB,CAClB,8CAGG,aAAc","file":"15.0a185435.chunk.css","sourcesContent":[".sidebar {\n  box-shadow: 3px 0px 6px #00000026;\n  min-height: 100vh;\n}\n.activeLink {\n  .lineHr {\n    display: block;\n  }\n}"]}
