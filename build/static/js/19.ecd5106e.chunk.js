@@ -1,0 +1,2 @@
+(this["webpackJsonpdxd-compliance"]=this["webpackJsonpdxd-compliance"]||[]).push([[19],{507:function(n,t,c){"use strict";c.r(t);var e=c(0),a=c(26),i=c(1),o=Object(e.lazy)((function(){return Promise.all([c.e(0),c.e(16)]).then(c.bind(null,479))}));t.default=function(){var n=Object(a.j)().path;return Object(i.jsx)(a.d,{children:Object(i.jsx)(a.b,{path:"".concat(n,"/login"),component:o})})}}}]);
+//# sourceMappingURL=19.ecd5106e.chunk.js.map

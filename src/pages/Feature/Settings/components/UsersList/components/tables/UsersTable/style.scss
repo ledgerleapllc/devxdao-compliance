@@ -1,0 +1,58 @@
+.users-table {
+  .table-body .col {
+    padding-bottom: 2rem;
+  }
+  .col-1 {
+    width: 18%;
+  }
+  .col-2 {
+    width: 8%;
+  }
+  .col-3 {
+    width: 10%;
+  }
+  .col-4 {
+    width: 10%;
+  }
+  .col-5 {
+    width: 10%;
+  }
+  .col-6 {
+    width: 10%;
+  }
+  .col-7 {
+    width: 7%;
+  }
+  .col-8 {
+    width: 7%;
+  }
+  .col-9 {
+    width: 20%;
+    padding-right: 0;
+  }
+}
+.users-table.read-only {
+  .table-body .col {
+    padding-bottom: 2rem;
+  }
+  .col-1 {
+    width: 20%;
+  }
+  .col-2 {
+    width: 20%;
+  }
+  .col-3 {
+    width: 20%;
+  }
+  .col-4 {
+    width: 20%;
+  }
+  .col-5 {
+    width: 20%;
+  }
+  .col-6, .col-7 {
+    width: 0%;
+    display: none;
+    padding-right: 0;
+  }
+}

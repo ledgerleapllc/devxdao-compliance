@@ -1,0 +1,46 @@
+.btn-primary {
+  @apply bg-primary text-white;
+}
+.btn-primary-outline {
+  @apply bg-transparent text-primary border border-primary;
+}
+.btn-danger {
+  @apply bg-red text-white;
+}
+.btn-default {
+  @apply bg-gray3 text-gray1;
+}
+.btn-success {
+  @apply bg-purple text-white;
+}
+.btn {
+  @apply h-14 rounded-4xl;
+  min-width: 11rem;
+  box-shadow: 0px 3px 6px #00000029;
+}
+.btn-xs {
+  @apply h-7 rounded-4xl text-xs;
+  min-width: 5rem;
+  .custom-loading {
+    left: -3px !important;
+  }
+}
+
+.btn-sm {
+  @apply h-10 rounded-4xl;
+  min-width: 8rem;
+  .custom-loading {
+    left: -3px !important;
+  }
+}
+
+.btn:disabled {
+  position: relative;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.long-text {
+  .custom-wrap {
+    white-space: pre-wrap;
+  } 
+}
