@@ -1,0 +1,10 @@
+.select-container {
+  .select-button {
+    @apply h-10 flex bg-transparent items-center;
+  }
+  .select-dropdown {
+    box-shadow: 0px 3px 6px #00000029;
+    z-index: 9999;
+    max-height: 200px;
+  }
+}

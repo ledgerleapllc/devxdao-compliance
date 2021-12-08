@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// reset
+* {
+  font-family: 'Work Sans', sans-serif !important;
+}
+
+h2 {
+  @apply text-4xl font-medium;
+}
+h6 {
+  @apply text-base font-medium;
+}
+input {
+  @apply text-sm border-b border-secondary outline-none placeholder-gray2 placeholder-opacity-50 bg-transparent;
+}
+
+button {
+  @apply outline-none;
+}
+
+textarea {
+  resize: none;
+}
+
+a {
+  cursor: pointer;
+}
+// layout
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.absolute-center {
+  @apply absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;
+}
+
+// main
+.main-logo {
+  font-size: 1.25rem;
+}
+
+.sidebar-logo {
+  font-size: 1rem;
+}
+
+.form-control {
+  @apply relative flex flex-col pb-8;
+  .form-error {
+    @apply absolute bottom-3.5 left-0 text-red text-xs;
+  }
+}
+.padding-tracker {
+  @apply -mr-card pr-tracker;
+}
+
+/* Track Scroll */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px transparent; 
+  border-radius: 10px;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary; 
+  border-radius: 15px;
+  visibility: hidden;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary; 
+  opacity: 0.7;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.scroll-window { 
+  .main-content {
+    height: auto !important;
+  }
+}
+
+.table-1 {
+  thead {
+    td {
+      font-weight: 500;
+    }
+  }
+}
+
+.custom-date-picker {
+  height: 40px;
+  // .MuiInputBase-input {
+  //   height: 1.2rem;
+  //   padding: 12px 14px;
+  // }
+  // label[class$="-MuiFormLabel-root-MuiInputLabel-root"] {
+  //   transform: translate(14px, 11px) scale(1);
+  // }
+}

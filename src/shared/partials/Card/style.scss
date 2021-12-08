@@ -1,0 +1,23 @@
+.card {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  width: 100%;
+  box-shadow: 0px 3px 6px #00000029;
+  @apply bg-white rounded-md px-card;
+  .card-header {
+    @apply pb-6;
+    h2 {
+      @apply text-primary text-base;
+    }
+  }
+  .card-body {
+    transition: max-height 0.25s ease-in-out;
+  }
+}
+.transition-ease-out {
+  transition: all 0.15s ease-out;
+}
+
+.transition-ease-in {
+  transition: all 0.25s ease-in;
+}

@@ -1,0 +1,2 @@
+(this["webpackJsonpdxd-compliance"]=this["webpackJsonpdxd-compliance"]||[]).push([[23],{511:function(t,c,n){"use strict";n.r(c);var e=n(0),a=n(26),i=n(1),o=Object(e.lazy)((function(){return n.e(9).then(n.bind(null,499))}));c.default=function(){var t=Object(a.j)().path;return Object(i.jsx)(a.d,{children:Object(i.jsx)(a.b,{path:"".concat(t),exact:!0,component:o})})}}}]);
+//# sourceMappingURL=23.4ac8b43d.chunk.js.map

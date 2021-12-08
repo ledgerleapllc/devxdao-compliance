@@ -1,0 +1,8 @@
+.custom-radio {
+  .MuiFormControlLabel-label {
+    @apply text-sm;
+  }
+  .MuiRadio-root {
+    padding: 0.25rem;
+  }
+}
