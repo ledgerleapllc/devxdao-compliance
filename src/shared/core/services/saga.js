@@ -16,7 +16,7 @@ const apiService = new ApiService();
 export function* get(url, params = {}, headers = {}) {
   try {
     const res = yield apiService.doGet(url, params, headers);
-    if (res.data?.message === 'Unauthenticated.') {
+    if (res.data?.message === 'Not authorized') {
       localStorage.clear();
       yield putSaga(logout({}));
       window.location.href = '/auth/login';
@@ -34,7 +34,7 @@ export function* get(url, params = {}, headers = {}) {
 export function* post(url, params = {}, headers = {}) {
   try {
     const res = yield apiService.doPost(url, params, headers);
-    if (res.data?.message === 'Unauthenticated.') {
+    if (res.data?.message === 'Not authorized') {
       localStorage.clear();
       yield putSaga(logout({}));
       window.location.href = '/auth/login';
@@ -52,7 +52,7 @@ export function* post(url, params = {}, headers = {}) {
 export function* put(url, params = {}, headers = {}) {
   try {
     const res = yield apiService.doPut(url, params, headers);
-    if (res.data?.message === 'Unauthenticated.') {
+    if (res.data?.message === 'Not authorized') {
       localStorage.clear();
       yield putSaga(logout({}));
       window.location.href = '/auth/login';
@@ -70,7 +70,7 @@ export function* put(url, params = {}, headers = {}) {
 export function* destroy(url, params = {}, headers = {}) {
   try {
     const res = yield apiService.doDelete(url, params, headers);
-    if (res.data?.message === 'Unauthenticated.') {
+    if (res.data?.message === 'Not authorized') {
       localStorage.clear();
       yield putSaga(logout({}));
       window.location.href = '/auth/login';
