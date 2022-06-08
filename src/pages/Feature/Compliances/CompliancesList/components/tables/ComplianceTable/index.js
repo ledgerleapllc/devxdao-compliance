@@ -157,15 +157,21 @@ export const ComplianceTable = ({ outParams, api }) => {
               <p>{formatDate(findInformalGrantVote(row)?.created_at)}</p>
             </Table.BodyCell>
             <Table.BodyCell>
-              {row?.compliance_status === 'approved' ? (
+              {row?.compliance_status === 'approved' && (
                 <div className="text-center">
                   <p>Approved</p>
                   <Link to={`proposals/${row.proposal_id}/compliance`} className="underline">see detail</Link>
                 </div>
-              ) : (
-                <div className="text-center text-red">
+              )}
+              {row?.compliance_status === 'pending' && (
+                 <div className="text-center text-red">
                   <p>Needs review</p>
                   {!!(user.is_super_admin || user.compliance) && <Link to={`proposals/${row.proposal_id}/compliance`} className="underline">review now</Link>}
+                </div>
+              )}
+              {row?.compliance_status === 'denied' && (
+                 <div className="text-center text-red">
+                  <p>Denied</p>
                 </div>
               )}
             </Table.BodyCell>
