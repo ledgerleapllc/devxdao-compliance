@@ -172,6 +172,7 @@ export const ComplianceTable = ({ outParams, api }) => {
               {row?.compliance_status === 'denied' && (
                  <div className="text-center text-red">
                   <p>Denied</p>
+                  <Link to={`proposals/${row.proposal_id}/compliance`} className="underline">review now</Link>
                 </div>
               )}
             </Table.BodyCell>
